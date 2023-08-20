@@ -1,0 +1,117 @@
+html{
+    background-color: #000;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+
+
+
+
+*,*::after, *::before{
+   
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;
+    text-transform: capitalize;
+    box-sizing: inherit;
+    
+}
+
+.contenedor-nav-principal{
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    border: .1rem solid #c18e41;
+    padding: .5rem;  
+}
+
+.img-nav{
+    order: 1;
+    flex-basis: 1;
+    max-height: 100%;
+    object-fit:contain;
+}
+
+.titulo-nav-principal{
+    order: 2;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.items-nav-principal{
+    order: 3;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+    justify-content: space-around;
+    flex-grow: 1;
+    list-style: none;
+        
+}
+.items-nav-principal li a:hover{
+    color: #c18e41;
+}
+
+
+
+@media (max-width:640px){/*DECLARAMOS QUE AL MOMENTO DE ESTAR MOSTRANDOSE EN UNA PANTALLA DE CIERTA MEDIDA NUESTRO CONTENIDO SE VA A ADAPTAR Y SE VA A MOSTRAR DE UNA MANERA MAS COMODA PARA EL USUARIO*/
+    .items-nav-principal{
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+    .contenedor-nav-principal{
+        flex-direction: column;
+       height: 10%;
+
+    }
+    .img-nav{
+        order: 1;
+        height: 10rem;
+        max-height: 100%;
+        object-fit:contain;
+    }
+   
+}
+
+
+.items-nav-principal li a{
+    text-decoration: none;
+    font-size: .8rem;
+    color: #fff;
+
+}
+
+
+
+
+/* FORM CONTACTO*/
+.contenedor-form{
+    display: block;
+    height: 100%;
+    background-color: #000;
+}
+
+.form-contacto{/* AUNQUE HAYAMOS TRAIDO EL ELEMENTO FORM DE BOOTSTRAP PODEMOS ESTILARLO MEDIANTE CSS */
+    height: 100%;
+    padding: 5rem;
+    background-color: #000;
+    border: .1rem solid #c18e41;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}

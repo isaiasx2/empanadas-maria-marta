@@ -1,0 +1,211 @@
+
+/* CONFIGURACIONES GLOBALES*/
+
+html{
+    background-color: #000;/*USANDO LA ETIQUETA HTML DECLARAMOS EL COLOR DE FONDO QUE VA A TENER NUESTRO DOCUMENTO */
+    box-sizing: border-box;/*ESTA PROPIEDAD SE UTILIZA PARA QUE AL MOMENTO DE DAR MARGIN Y PADDING SE RESPETE LA MEDIDA DE LA CAJA CONTENEDORA Y NO SE ALTEREN LAS MEDIDAS DEL CONTENEDOR*/
+    font-size: 62.5%;/*SE UTILIZA PARA MEDIANTE UN CALCULO UTILIZAR MEDIDAS RELATIVAS COMO LO ES REM, COMO SI FUESEN PIXELES, TENIENDO COMO REFERENCIA QUE 1REM = 10PX*/
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');/*REALIZAMOS LA IMPORTACION DE NUESTRA FUENTE DE TEXTO DESDE GOOGLE FONTS*/
+
+
+
+
+
+*,*::after, *::before{/*DECIMOS QUE EN EL BODY * ANTES Y DESPUES SE VAN A RESPETAR LOS SIGUIENTES PARAMETROS*/
+   
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;/*IMPLEMENTACION DE LA FUENTE*/
+    text-transform: capitalize;/*SE UTILIZA PARA PONER MAYUSCULAS A LA PRMERA LETRA DE CADA PALABRA*/
+    box-sizing: inherit;/*HEREDA LAS CONFIGURACIONES DE SU CONTENEDOR PADRE EN ESTE CASO EL BOX SIZING DE LA ETIQUETA HTMOL*/
+    
+}
+
+                        /* NAVEGADOR PRINCIPAL*/
+
+.contenedor-nav-principal{
+    height: 10rem;
+    display: flex;/*DETERMINAMOS LA FORMA EN QUE VAMOS A MOSTRAR LOS ELEMENTOS*/
+    justify-content: center;/*DECIMOS QUE NUESTRO ELEMENTOS DE FORMA HORIZONTAL SE VAN A MOSTRAR EN EL CENTRO DE LA CAJJA*/
+    background-color: #000;/*DETERMINAMOS EL COLOR DEL FONDO*/
+    border: .1rem solid #c18e41;/*DECIMOS QUE VA A TENER UN BORDE DE 1PX DE GROSOR SOLIDO Y DEL COLOR #c18e41*/
+    padding: .5rem;/*DECIMOS QUE DESDE EL BORDE DEL CONTENEDOR VA A TENER UN ESPACIO DE 5PX HACIA ADENTRO*/
+    
+   
+}
+
+.img-nav{
+    order: 1;/*DECLARAMOS QUE DENTRO DE LA CAJA CONTENEDORA ESTE ELEMENTO SE ENCUENTRA PRIMERO EN EL ORDEN*/
+    flex-grow: 1;/*DECLARAMOS CUANTO VA A PODER CRECER ESTE ELEMENTO EN CASO DE QUE SU CONTENEDOR PADRE CAMBIE DE TAMAÑO, A MAS VALOR MAYOR PRIORIDAD EN EL CRECIMIENTO*/
+    max-height: 100%; /*DETERMINAMOS LA ALTURA MAXIMA DEL ELEMENTO*/
+    object-fit:contain;
+}
+
+.titulo-nav-principal{
+    order: 2;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 2rem;/*DECLARAMOS EL TAMAÑO DE LA FUENTE*/
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;/*NUESTROS ELEMENTOS SE VAN A MOSTRAR DE ARRIBA HACIA ABAJO UNO ABAJO DEL OTRO*/
+    justify-content: center;
+}
+
+.items-nav-principal{
+    order: 3;
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+    justify-content: space-around;
+    flex-grow: 1;
+    list-style: none;
+        
+}
+.items-nav-principal li a:hover{
+    color: #c18e41;
+}
+
+
+.items-nav-principal li a{
+    text-decoration: none;/*QUITAMOS EL SUBRAYADO DE LAS ETIQUETAS A*/
+    font-size: .8rem;
+    color: #fff;
+
+}
+
+
+
+
+                          /* HEADER PRINCIPAL */
+
+.encabezado-principal{
+    height:  20rem;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem ;
+    border: .1rem solid #c18e41;
+    
+    
+}
+
+.encabezado-principal h2{
+    color: #fff;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.baner{
+    width: 80%;
+    height: 100%;
+    display: flex;
+}
+
+.baner img{/* DENTRO DE NUESTRO CONTENEDOR CON LA CLASE BANER SELECCIONAMOS LA ETIQUETA IMG*/
+    width: 0;/*LE DAMOS UN ANCHO DE 0*/
+    scale: 1;/*DECLARAMOS QUE ESTA VA A SER SU ESCALA 1*/
+    flex-grow: 1;/*DECLARAMOS CUANTO VA A PODER CRECER NUESTRO ELEMENTO*/
+    object-fit: cover;/*DECLARAMOS QUE NUESTRA IMAGEN VA A CUBRIR TODO EL ESPACIO DISPONIBLE SIN DEFORMARSE*/
+    opacity: .5;
+    transition: .5s ease all;/*DECLARAMOS UNA TRANSICION DE .5SEGUNDOS A TODO ELEMENTO QUE TENGA UNA TRANSFORMACION*/
+}
+
+.baner img:hover{/*DECLARAMOS QUE AL MOMENTO DE PONER EL PUNTERO SOBRE UNA IMAGEN ESTE CAMBIE A UNA MANITO Y LA IMAGEN AUMENTE SU TAMAÑO. SE VUELVA MAS CLARA Y CON UNA APARIENCIA MAS VISTOSA*/
+    cursor: grab;
+    width: 10rem;
+    opacity: 1;
+    filter: contrast(120%);
+    filter: saturate(120%);
+
+
+}
+
+/* MAIN*/
+
+.contenedor-principal-grid{/*UTILIZANDO GRID DETERMINAMOS LA MANERA EN QUE SE VA A DIVIDIR NUESTRO CONTENEDOR PADRE, POR EJEMPLO AQUI DECLARO QUE VA A TENER 2 COLUMNAS Y TRES FILAS COMO SI FUESEN TABLAS DE DATOS*/
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: #000;
+    border: .1rem solid #c18e41;
+    padding: .5rem;
+    
+}
+
+.producto{/*DETERRMINO EL TAMAÑO QUE VA A TENER CADA UNO DE MIS CAJITAS DENTRO DE CADA CASILLERO DEL GRID*/
+    height: 25rem;
+    width: 100%;
+    display: flex;
+    
+    
+}
+.descripcion-producto{
+    width: 50%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.descripcion-producto h2{
+    flex-grow: .5;
+
+}
+
+.descripcion-producto span{
+    flex-grow: 2;
+    font-size: .9rem;
+    font-weight: lighter;
+}
+
+.descripcion-producto button{
+    flex-shrink: 1;
+    margin-bottom: .2rem;
+}
+.producto img{
+    width: 50%;
+    height: 25rem;
+    object-fit: cover;
+    padding: .5rem;
+    border-radius: 5%;
+    filter: opacity(.5);
+    scale: 1;
+    transition: all ease .3s;
+    
+}
+
+.producto img:hover{/*al momento de ubicar el cursor sobre la imagen del ´roducto este reduce su tamaño en 0.1*/
+    scale: .9;
+    filter: contrast(120%);
+    filter: opacity(100%);
+    cursor: grabbing;
+}
+
+/* PIE DE PAGINA*/
+
+.pie{
+    width: 100%;
+    height: 15rem;
+    background-color: #000;
+    display: flex;
+    padding: 1rem;
+}
+.pie p{
+    flex-grow: 1 ;
+    padding: 1rem;
+    color: #fff;
+}
+.pie iframe{
+    flex-grow: 2;
+}
+
+

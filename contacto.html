@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script><!--REALIZO LAS IMPORTACIONES CORRESPONDIENTES DE BOOTSTRAP, EN LA DOCUMENTACIONESTA DETALLADO EL PROCESO-->
+    <link rel="stylesheet" href="/Pagina/style/contacto.css"><!--ES MUY IMPORTANTE HACER LA CONEXION PARA QUE PODAMOS ESTILAR EN CSS-->
+    <title>contacto</title>
+</head>
+<body>
+    <nav class="contenedor-nav-principal">
+        
+        <img src="/Pagina/image/3-logo-blanco.png" class="img-nav"/>
+        <h1 class="titulo-nav-principal">empanadas maria marta</h1>
+                
+        <ul class="items-nav-principal activo-simple"> <!--DE ESTA MANERA PODEMOS APLICAR ESTILOS EN LINEA-->
+           
+            
+            <li><a href="./index.html">inicio</a></li>
+            <li><a href="#">contacto</a></li>
+
+        </ul>
+       
+    </nav>
+
+    <main class="contenedor-form">
+        <form  class="form-contacto" ><!--UTILIZAMOS BOOTSTRAP PARA COPIAR Y PEGAR UN MODELO DE FORMULARIO SIMPLE PARA SOLICITAR INFORMACION DEL CLIENTE-->
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">nombre</label>
+                <input type="text" class="form-control w-100" id="exampleFormControlInput1" placeholder="ingresa tu nombre">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Telefono</label>
+                <input type="tel" class="form-control w-100" id="exampleFormControlInput1" placeholder="numero de contacto">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">email</label>
+                <input type="email" class="form-control w-100" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div  class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Escribinos</label>
+                <textarea class="form-control w-100" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <input type="submit" value="Enviar"><!--AGREGAMOS EL BOTON ENVIAR Y LE DAMOS ESTILOS CON BOOTSTRAP -->
+        </form>
+        
+
+    </main>
+
+</body>
+</html>
